@@ -1,70 +1,116 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(0, 30, 56);
+main{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-    font-size: clamp(10px, 3vw, 20px);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container{
+    display:flex;
     justify-content: center;
-    border: solid white;
-    max-width: 400px;
-    padding: 50px;
+    align-items: center;
+    flex-direction: column;
+    border:solid;
     border-radius: 30px;
-    min-height: 50vh;
+    min-width: 60vmin;
+    height: 70vh; /* ajusta a altura do container */
+    position: relative;
+    margin: 100px;
 }
 
 .container h1{
-    color: white;
-}
-
-#counter{
-    all: unset;
-    padding: 3vmin;
-    background-color: white;
-}
-
-#myMessage {
-    opacity: 1;
-    color: green;
-}
- 
-#myButton{
-    all: unset;
-    background-color: rgb(182, 182, 182);
-    border-radius: 10px;
-    margin-top: auto;
-    padding: 2vmin;
-    margin-bottom: 20%;
-}
-
-#next{
-    all: unset;
-    border-radius: 10px;
-    padding: 1vmax;
-    background-color: aliceblue;
     position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 2vmax;
-    z-index: 2;
-    cursor: pointer;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Faz os elementos centralizarem verticalmente */
 }
 
-@media (max-width: 768px) {
-    #nextPage {
-        position: static;
-        margin: unset;
-        margin-top: 10%;
-    }
+.password-row {
+    display: flex;
+    justify-content: center; /* Mantém os spans centralizados na mesma linha */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 60px;
+    border: solid;
+    background-color: bisque;
+}
+
+.container_2{
+    display: flex;         /* Organiza a left-div e right-div lado a lado */
+    width: 100%;
+    margin: 0;
+    justify-content: space-between;
+    border: solid;
+    height: 650px;
+
+}
+
+.geral{
+    flex: 3;               /* Ocupa 3/4 da largura */
+    background-color: lightblue;
+    padding: 20px;
+    display: grid;          /* Usa Grid dentro da left-div */
+    grid-template-columns: repeat(3, 1fr);  /* Três linhas de mesmo tamanho */
+    gap: 10px;
+    
+}
+
+#five{
+    background-color: lightgreen;
+    border: green solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+    gap:20px;
+}
+
+#ten{
+    background-color: orange;
+    border: orangered solid;    
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+    gap:20px;
+}
+
+#fif{
+    background-color: red;
+    border: orangered solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    overflow-y: auto;
+    gap:20px;
+}
+
+#painel{
+    flex: 1;              
+    background-color: lightcoral;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; 
+    gap:20px;
+}
+
+.key-adm{
+    cursor: pointer;
+    padding: 60px;
+    background-color: aliceblue;
 }
 
 @keyframes fadeOut {
@@ -74,27 +120,4 @@ html, body {
 
 .fade-out {
     animation: fadeOut 1s forwards;
-}
-
-.geral{
-    display: flex;
-    padding:2%;
-    justify-content: space-around;
-    border: solid;
-    height: 70vh;
-}
-
-.five_min{
-    border: solid;
-    padding: 20px;
-}
-
-.ten_min{
-    border: solid;
-    padding: 20px;
-}
-
-.fif_min{
-    border: solid;
-    padding: 20px;
 }
