@@ -1,63 +1,60 @@
 html, body {
     height: 100%;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(0, 30, 56);
-    flex-direction: column;
-  }
-  
-  .container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    height: 80vh; 
+    font-size: clamp(10px, 3vw, 20px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: solid white;
+    max-width: 400px;
+    padding: 50px;
     border-radius: 30px;
-    background-color: rgb(1, 47, 86);
-    box-shadow:0 0 20px black;
-    position: relative;
-    width: 500px;
-    z-index: 1;
+    min-height: 50vh;
 }
+
 .container h1{
-
-    width: fit-content;
-    position: absolute;
-    top:0;
-    color: antiquewhite;
-    padding: 40px 0px;
+    color: white;
 }
 
+#counter{
+    all: unset;
+    padding: 3vmin;
+    background-color: white;
+}
 
 #myMessage {
     opacity: 1;
     color: green;
-    height: 8%;
-    font-size: 25px;
-    position: absolute;
-    bottom: 0;
 }
-
+ 
 #myButton{
     all: unset;
     background-color: rgb(182, 182, 182);
-    padding: 20px 50px;
     border-radius: 10px;
     margin-top: auto;
+    padding: 2vmin;
     margin-bottom: 20%;
 }
 
-#nextPage{
+#next{
     all: unset;
-    padding: 20px 50px;
+    border-radius: 10px;
+    padding: 1vmax;
     background-color: aliceblue;
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 70px 100px;
+    margin: 2vmax;
     z-index: 2;
     cursor: pointer;
 }
@@ -65,7 +62,8 @@ html, body {
 @media (max-width: 768px) {
     #nextPage {
         position: static;
-        margin-top: 20px;
+        margin: unset;
+        margin-top: 10%;
     }
 }
 
@@ -76,4 +74,27 @@ html, body {
 
 .fade-out {
     animation: fadeOut 1s forwards;
+}
+
+.geral{
+    display: flex;
+    padding:2%;
+    justify-content: space-around;
+    border: solid;
+    height: 70vh;
+}
+
+.five_min{
+    border: solid;
+    padding: 20px;
+}
+
+.ten_min{
+    border: solid;
+    padding: 20px;
+}
+
+.fif_min{
+    border: solid;
+    padding: 20px;
 }
