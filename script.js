@@ -37,7 +37,7 @@ button.addEventListener("click", () => {
   function moveDiv(source, target, delay) {
     setTimeout(() => {
       if (source.contains(div)) {
-        target.appendChild(div);
+        target.appendChild(div); // append: anexar
       }
     }, delay);
   }
@@ -53,7 +53,7 @@ button.addEventListener("click", () => {
     const clickTime = new Date();
     const timeDifference = clickTime - now;
 
-    const seconds = Math.floor((timeDifference / 1000) % 60);
+    const seconds = Math.floor((timeDifference / 1000) % 60); //math.floor tira a parte racional do numero
     const minutes = Math.floor(timeDifference / 1000 / 60);
 
     const formattedMinutes = String(minutes).padStart(2, "0");
