@@ -23,7 +23,7 @@ button.addEventListener("click", () => {
 
   document.getElementById("counter").style.display = "block";
 
-  const now = new Date();
+  const now = new Date(); //Uma instância é uma ocorrência real e específica de um objeto.
   const horario = now.toLocaleTimeString("pt-BR", {
     hour: "2-digit",
     minute: "2-digit",
@@ -34,7 +34,7 @@ button.addEventListener("click", () => {
 
   five.appendChild(div);
 
-  function moveDivAfterDelay(source, target, delay) {
+  function moveDiv(source, target, delay) {
     setTimeout(() => {
       if (source.contains(div)) {
         target.appendChild(div);
@@ -42,8 +42,8 @@ button.addEventListener("click", () => {
     }, delay);
   }
 
-  moveDivAfterDelay(five, ten, 300000);
-  moveDivAfterDelay(ten, fif, 600000);
+  moveDiv(five, ten, 300000);
+  moveDiv(ten, fif, 600000);
 
   div.addEventListener("click", () => {
     document.getElementById("TV").innerHTML = `${div.textContent}`;
@@ -82,4 +82,8 @@ button.addEventListener("click", () => {
     }
     showConfirm();
   });
+});
+
+window.addEventListener('load', function() {
+  localStorage.clear();
 });
